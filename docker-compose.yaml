@@ -1,0 +1,13 @@
+version: "3"
+services:
+  echo-srv:
+    build: .
+    ports:
+        - "9090:9091"
+    depends_on:
+        - rediska
+  rediska:
+    image: redis
+    ports:
+        - "6380:6379"
+
